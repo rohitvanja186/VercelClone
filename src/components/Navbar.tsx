@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Button, Modal, Input, Checkbox, Form } from 'antd';
+import { Button, Modal, Input, Checkbox, Form, Typography } from 'antd';
 import { MoonOutlined } from '@ant-design/icons';
 import logo from '../assets/gulf.svg';
+
+const { Text, Link } = Typography;
 
 const NavBar: React.FC = () => {
   const [isLoginModalVisible, setIsLoginModalVisible] = useState(false);
@@ -44,43 +46,92 @@ const NavBar: React.FC = () => {
 
       <Modal title="Login" visible={isLoginModalVisible} onCancel={handleCancel} footer={null}>
         <Form layout="vertical">
-          <Form.Item label="Username">
+          <Form.Item
+            name="username"
+            label="Username"
+            rules={[{ required: true, message: 'Please input your username!' }]}
+          >
             <Input />
           </Form.Item>
-          <Form.Item label="Password">
+          <Form.Item
+            name="password"
+            label="Password"
+            rules={[{ required: true, message: 'Please input your password!' }]}
+          >
             <Input.Password />
           </Form.Item>
-          <Form.Item>
+          <div className="flex justify-between items-center mb-4">
+            <Link href="#">Forgot password</Link>
             <Checkbox>Remember me</Checkbox>
-          </Form.Item>
+          </div>
           <Form.Item>
-            <Button type="primary" htmlType="submit">Login</Button>
+            <Button type="primary" htmlType="submit" block>
+              Login
+            </Button>
           </Form.Item>
-          <Form.Item>
-            <a href="#">Forgot password</a>
-          </Form.Item>
-          <Form.Item>
-            Not a user? Sign up for the best deals!
-          </Form.Item>
+          <div className="text-center">
+            <Text>
+              Not a user? <Link onClick={showRegisterModal}>Sign up</Link> for the best deals!
+            </Text>
+          </div>
         </Form>
       </Modal>
 
       <Modal title="Register" visible={isRegisterModalVisible} onCancel={handleCancel} footer={null}>
         <Form layout="vertical">
-          <Form.Item label="First Name">
+          <Form.Item
+            name="fullName"
+            label="Full Name"
+            rules={[{ required: true, message: 'Please input your full name!' }]}
+          >
             <Input />
           </Form.Item>
-          <Form.Item label="Last Name">
+          <Form.Item
+            name="phone"
+            label="Phone Number"
+            rules={[{ required: true, message: 'Please input your phone number!' }]}
+          >
             <Input />
           </Form.Item>
-          <Form.Item label="Phone Number">
+          <Form.Item
+            name="email"
+            label="Email"
+            rules={[
+              { required: true, message: 'Please input your email!' },
+              { type: 'email', message: 'Please enter a valid email address!' }
+            ]}
+          >
             <Input />
           </Form.Item>
-          <Form.Item label="Email">
-            <Input />
+          <Form.Item
+            name="password"
+            label="Password"
+            rules={[{ required: true, message: 'Please input your password!' }]}
+          >
+            <Input.Password />
+          </Form.Item>
+          <Form.Item
+            name="confirmPassword"
+            label="Confirm Password"
+            dependencies={['password']}
+            rules={[
+              { required: true, message: 'Please confirm your password!' },
+              ({ getFieldValue }) => ({
+                validator(_, value) {
+                  if (!value || getFieldValue('password') === value) {
+                    return Promise.resolve();
+                  }
+                  return Promise.reject(new Error('The two passwords do not match!'));
+                },
+              }),
+            ]}
+          >
+            <Input.Password />
           </Form.Item>
           <Form.Item>
-            <Button type="primary" htmlType="submit">Create an Account</Button>
+            <Button type="primary" htmlType="submit" block>
+              Create an Account
+            </Button>
           </Form.Item>
         </Form>
       </Modal>
