@@ -49,14 +49,14 @@ const NavBar: React.FC = () => {
           <Form.Item
             name="username"
             label="Username"
-            rules={[{ required: true, message: 'Please input your username!' }]}
+            rules={[{ required: true, message: 'Field required.' }]}
           >
             <Input />
           </Form.Item>
           <Form.Item
             name="password"
             label="Password"
-            rules={[{ required: true, message: 'Please input your password!' }]}
+            rules={[{ required: true, message: 'Field required.' }]}
           >
             <Input.Password />
           </Form.Item>
@@ -82,14 +82,14 @@ const NavBar: React.FC = () => {
           <Form.Item
             name="fullName"
             label="Full Name"
-            rules={[{ required: true, message: 'Please input your full name!' }]}
+            rules={[{ required: true, message: 'Field required.' }]}
           >
             <Input />
           </Form.Item>
           <Form.Item
             name="phone"
             label="Phone Number"
-            rules={[{ required: true, message: 'Please input your phone number!' }]}
+            rules={[{ required: true, message: 'Field required.' }]}
           >
             <Input />
           </Form.Item>
@@ -97,7 +97,7 @@ const NavBar: React.FC = () => {
             name="email"
             label="Email"
             rules={[
-              { required: true, message: 'Please input your email!' },
+              { required: true, message: 'Field required.' },
               { type: 'email', message: 'Please enter a valid email address!' }
             ]}
           >
@@ -106,7 +106,7 @@ const NavBar: React.FC = () => {
           <Form.Item
             name="password"
             label="Password"
-            rules={[{ required: true, message: 'Please input your password!' }]}
+            rules={[{ required: true, message: 'Field required.' }]}
           >
             <Input.Password />
           </Form.Item>
@@ -115,7 +115,7 @@ const NavBar: React.FC = () => {
             label="Confirm Password"
             dependencies={['password']}
             rules={[
-              { required: true, message: 'Please confirm your password!' },
+              { required: true, message: 'Field required.' },
               ({ getFieldValue }) => ({
                 validator(_, value) {
                   if (!value || getFieldValue('password') === value) {
