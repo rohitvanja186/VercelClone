@@ -9,8 +9,8 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <main className="bg-[#f6f8f9] pt-10">
-      <section className=" max-w-[1700px] mx-auto px-10 3xl:px-0 space-y-56">
+    <main className="bg-[#f6f8f9] dark:bg-gray-900 pt-10">
+      <section className="max-w-[1700px] mx-auto px-10 3xl:px-0 space-y-56">
         {/* Hero section with form */}
         <section 
           className="h-[680px] rounded-3xl relative" 
@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
                 Streamline Your Travel Program with Customized Business Travel Management Services
               </p>
             </div>
-            <div className="absolute -bottom-20 w-[80%] bg-white rounded-3xl p-7 shadow-lg">
+            <div className="absolute -bottom-20 w-[80%] bg-white dark:bg-gray-800 rounded-3xl p-7 shadow-lg">
               <Form
                 name="contact"
                 onFinish={onFinish}
@@ -36,34 +36,34 @@ const HomePage: React.FC = () => {
               >
                 <Form.Item
                   name="companyName"
-                  label="Company Name"
+                  label={<span className="dark:text-white">Company Name</span>}
                   rules={[{ required: true, message: 'Field required.' }]}
                 >
-                  <Input placeholder="Enter" />
+                  <Input placeholder="Enter" className="dark:bg-gray-700 dark:text-white" />
                 </Form.Item>
                 <Form.Item
                   name="contactPerson"
-                  label="Contact Person Name"
+                  label={<span className="dark:text-white">Contact Person Name</span>}
                   rules={[{ required: true, message: 'Field required.' }]}
                 >
-                  <Input placeholder="Enter" />
+                  <Input placeholder="Enter" className="dark:bg-gray-700 dark:text-white" />
                 </Form.Item>
                 <Form.Item
                   name="phoneNumber"
-                  label="Phone Number"
+                  label={<span className="dark:text-white">Phone Number</span>}
                   rules={[{ required: true, message: 'Field required.' }]}
                 >
-                  <Input placeholder="Enter" type="tel" />
+                  <Input placeholder="Enter" type="tel" className="dark:bg-gray-700 dark:text-white" />
                 </Form.Item>
                 <Form.Item
                   name="email"
-                  label="Email Address"
+                  label={<span className="dark:text-white">Email Address</span>}
                   rules={[
                     { required: true, message: 'Field required.' },
                     { type: 'email', message: 'Please enter a valid email address!' }
                   ]}
                 >
-                  <Input placeholder="Enter" type="email" />
+                  <Input placeholder="Enter" type="email" className="dark:bg-gray-700 dark:text-white" />
                 </Form.Item>
                 <Form.Item className="md:col-span-1">
                   <Button type="primary" htmlType="submit" className="w-full">Let's Talk</Button>
@@ -97,26 +97,26 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           <section className="grid md:grid-cols-3 gap-10">
-            <div className="space-y-4 p-6 rounded-xl bg-blue-50">
+            <div className="space-y-4 p-6 rounded-xl bg-blue-50 dark:bg-blue-900">
               <div className="space-y-1">
-                <span className="text-slate-600">Tailored Trip Planning</span>
-                <h3 className="text-slate-800 text-xl font-medium">Comprehensive Travel Booking</h3>
+                <span className="text-slate-600 dark:text-gray-300">Tailored Trip Planning</span>
+                <h3 className="text-slate-800 text-xl font-medium dark:text-white">Comprehensive Travel Booking</h3>
               </div>
-              <p className="leading-[23.2px] text-slate-600">From flights to accommodations, we handle every detail to ensure a seamless travel experience.</p>
+              <p className="leading-[23.2px] text-slate-600 dark:text-gray-300">From flights to accommodations, we handle every detail to ensure a seamless travel experience.</p>
             </div>
-            <div className="space-y-4 p-6 rounded-xl bg-green-50">
+            <div className="space-y-4 p-6 rounded-xl bg-green-50 dark:bg-green-900">
               <div className="space-y-1">
-                <span className="text-slate-600">Effortless Spending Oversight</span>
-                <h3 className="text-slate-800 text-xl font-medium">Expense Management Solutions</h3>
+                <span className="text-slate-600 dark:text-gray-300">Effortless Spending Oversight</span>
+                <h3 className="text-slate-800 text-xl font-medium dark:text-white">Expense Management Solutions</h3>
               </div>
-              <p className="leading-[23.2px] text-slate-600">Track, manage, and optimize business travel expenses with our intuitive expense management solutions.</p>
+              <p className="leading-[23.2px] text-slate-600 dark:text-gray-300">Track, manage, and optimize business travel expenses with our intuitive expense management solutions.</p>
             </div>
-            <div className="space-y-4 p-6 rounded-xl bg-orange-50">
+            <div className="space-y-4 p-6 rounded-xl bg-orange-50 dark:bg-orange-900">
               <div className="space-y-1">
-                <span className="text-slate-600">Dedicated Traveler Care</span>
-                <h3 className="text-slate-800 text-xl font-medium">Traveler Assistance and Support</h3>
+                <span className="text-slate-600 dark:text-gray-300">Dedicated Traveler Care</span>
+                <h3 className="text-slate-800 text-xl font-medium dark:text-white">Traveler Assistance and Support</h3>
               </div>
-              <p className="leading-[23.2px] text-slate-600">Our team is here around the clock to provide personalized support and assistance for all travelers' needs.</p>
+              <p className="leading-[23.2px] text-slate-600 dark:text-gray-300">Our team is here around the clock to provide personalized support and assistance for all travelers' needs.</p>
             </div>
           </section>
         </section>
@@ -134,23 +134,23 @@ const HomePage: React.FC = () => {
             </div>
           </div>
           <div className="space-y-10">
-            <div className="space-y-4 p-6 rounded-xl bg-blue-50">
+            <div className="space-y-4 p-6 rounded-xl bg-blue-50 dark:bg-blue-900">
               <div className="space-y-1">
-                <h3 className="text-slate-800 text-xl font-medium">Simplify Travel Management for Health Professionals</h3>
+                <h3 className="text-slate-800 text-xl font-medium dark:text-white">Simplify Travel Management for Health Professionals</h3>
               </div>
-              <p className="leading-[23.2px] text-slate-600">Streamline travel arrangements for medical staff and ensure seamless patient care with our tailored solutions for the healthcare sector.</p>
+              <p className="leading-[23.2px] text-slate-600 dark:text-gray-300">Streamline travel arrangements for medical staff and ensure seamless patient care with our tailored solutions for the healthcare sector.</p>
             </div>
-            <div className="space-y-4 p-6 rounded-xl bg-green-50">
+            <div className="space-y-4 p-6 rounded-xl bg-green-50 dark:bg-green-900">
               <div className="space-y-1">
-                <h3 className="text-slate-800 text-xl font-medium">Enhance Efficiency for Consulting Teams</h3>
+                <h3 className="text-slate-800 text-xl font-medium dark:text-white">Enhance Efficiency for Consulting Teams</h3>
               </div>
-              <p className="leading-[23.2px] text-slate-600">Optimize travel logistics and client engagements with our specialized solutions tailored to the unique demands of consulting firms.</p>
+              <p className="leading-[23.2px] text-slate-600 dark:text-gray-300">Optimize travel logistics and client engagements with our specialized solutions tailored to the unique demands of consulting firms.</p>
             </div>
-            <div className="space-y-4 p-6 rounded-xl bg-orange-50">
+            <div className="space-y-4 p-6 rounded-xl bg-orange-50 dark:bg-orange-900">
               <div className="space-y-1">
-                <h3 className="text-slate-800 text-xl font-medium">Maximize Efficiency for Financial Institutions</h3>
+                <h3 className="text-slate-800 text-xl font-medium dark:text-white">Maximize Efficiency for Financial Institutions</h3>
               </div>
-              <p className="leading-[23.2px] text-slate-600">Drive productivity and compliance in financial travel operations with our comprehensive solutions tailored for the finance industry.</p>
+              <p className="leading-[23.2px] text-slate-600 dark:text-gray-300">Drive productivity and compliance in financial travel operations with our comprehensive solutions tailored for the finance industry.</p>
             </div>
           </div>
         </section>
