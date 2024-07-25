@@ -8,3 +8,24 @@
 body {
   @apply font-poppins;
 }
+
+/* Ensure consistent placeholder styling, including for Ant Design password inputs */
+.ant-input::placeholder,
+.ant-input-password input::placeholder {
+  color: #9CA3AF !important; /* This matches Tailwind's gray-400 */
+}
+
+/* Dark mode styles for Ant Design Modal */
+.dark .ant-modal-content,
+.dark .ant-modal-header {
+  background-color: #1F2937 !important; /* gray-800 */
+  color: #FFFFFF !important;
+}
+
+.dark .ant-modal-title {
+  color: #FFFFFF !important;
+}
+
+.dark .ant-modal-close-x {
+  color: #FFFFFF !important;
+}

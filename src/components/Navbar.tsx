@@ -30,7 +30,7 @@ const NavBar: React.FC = () => {
   }, [isDarkMode]);
 
   return (
-    <nav className="bg-white dark:bg-gray-800 shadow-md p-5 flex justify-between items-center font-poppins">
+    <nav className="bg-white dark:bg-gray-900 shadow-md p-5 flex justify-between items-center font-poppins">
       <div className="flex items-center ml-4">
         <img src={logo} alt="Logo" className="h-12 w-12 mr-4" />
       </div>
@@ -38,7 +38,7 @@ const NavBar: React.FC = () => {
         <Button
           type="default"
           onClick={showLoginModal}
-          className="mr-4 text-lg px-5 py-5 rounded-lg bg-white text-black dark:bg-gray-700 dark:text-white"
+          className="mr-4 text-lg px-5 py-5 rounded-lg bg-white text-black dark:bg-gray-900 dark:text-white"
         >
           Login
         </Button>
@@ -54,7 +54,7 @@ const NavBar: React.FC = () => {
           shape="circle"
           icon={isDarkMode ? <SunOutlined style={{ fontSize: '15px' }} /> : <MoonOutlined style={{ fontSize: '15px' }} />}
           onClick={toggleDarkMode}
-          className="text-lg px-4 py-2 bg-white text-black dark:bg-gray-700 dark:text-white"
+          className="text-lg px-4 py-2 bg-white text-black dark:bg-gray-900 dark:text-white"
         />
       </div>
 
@@ -71,14 +71,14 @@ const NavBar: React.FC = () => {
             label={<span className="dark:text-white">Username</span>}
             rules={[{ required: true, message: 'Field required.' }]}
           >
-            <Input placeholder="Enter" className="dark:bg-gray-700 dark:text-white" />
+            <Input placeholder="Enter" className="dark:bg-gray-900 dark:text-white" />
           </Form.Item>
           <Form.Item
             name="password"
             label={<span className="dark:text-white">Password</span>}
             rules={[{ required: true, message: 'Field required.' }]}
           >
-            <Input.Password placeholder="Enter" className="dark:bg-gray-700 dark:text-white" />
+            <Input.Password placeholder="Enter" className="dark:bg-gray-900 dark:text-white" />
           </Form.Item>
           <div className="flex justify-between items-center mb-4">
             <Link href="#" className="dark:text-blue-400">Forgot password</Link>
@@ -110,14 +110,14 @@ const NavBar: React.FC = () => {
             label={<span className="dark:text-white">Full Name</span>}
             rules={[{ required: true, message: 'Field required.' }]}
           >
-            <Input placeholder="Enter" className="dark:bg-gray-700 dark:text-white" />
+            <Input placeholder="Enter" className="dark:bg-gray-900 dark:text-white" />
           </Form.Item>
           <Form.Item
             name="phone"
             label={<span className="dark:text-white">Phone Number</span>}
             rules={[{ required: true, message: 'Field required.' }]}
           >
-            <Input placeholder="Enter" className="dark:bg-gray-700 dark:text-white" />
+            <Input placeholder="Enter" className="dark:bg-gray-900 dark:text-white" />
           </Form.Item>
           <Form.Item
             name="email"
@@ -127,14 +127,14 @@ const NavBar: React.FC = () => {
               { type: 'email', message: 'Please enter a valid email address!' }
             ]}
           >
-            <Input placeholder="Enter" className="dark:bg-gray-700 dark:text-white" />
+            <Input placeholder="Enter" className="dark:bg-gray-900 dark:text-white" />
           </Form.Item>
           <Form.Item
             name="password"
             label={<span className="dark:text-white">Password</span>}
             rules={[{ required: true, message: 'Field required.' }]}
           >
-            <Input.Password placeholder="Enter" className="dark:bg-gray-700 dark:text-white" />
+            <Input.Password placeholder="Enter" className="dark:bg-gray-900 dark:text-white" />
           </Form.Item>
           <Form.Item
             name="confirmPassword"
@@ -152,7 +152,7 @@ const NavBar: React.FC = () => {
               }),
             ]}
           >
-            <Input.Password className="dark:bg-gray-700 dark:text-white" />
+            <Input.Password placeholder="Enter" className="dark:bg-gray-900 dark:text-white" />
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit" block>

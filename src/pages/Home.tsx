@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <main className="bg-[#f6f8f9] dark:bg-gray-900 pt-10">
+    <main className="bg-[#f6f8f9] dark:bg-gray-800 pt-10">
       <section className="max-w-[1700px] mx-auto px-10 3xl:px-0 space-y-56">
         {/* Hero section with form */}
         <section 
@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
                 Streamline Your Travel Program with Customized Business Travel Management Services
               </p>
             </div>
-            <div className="absolute -bottom-20 w-[80%] bg-white dark:bg-gray-800 rounded-3xl p-7 shadow-lg">
+            <div className="absolute -bottom-20 w-[80%] bg-white dark:bg-gray-900 rounded-3xl p-7 shadow-lg">
               <Form
                 name="contact"
                 onFinish={onFinish}
@@ -39,21 +39,21 @@ const HomePage: React.FC = () => {
                   label={<span className="dark:text-white">Company Name</span>}
                   rules={[{ required: true, message: 'Field required.' }]}
                 >
-                  <Input placeholder="Enter" className="dark:bg-gray-700 dark:text-white" />
+                  <Input placeholder="Enter" className="placeholder-gray-400 dark:bg-gray-900 dark:text-white" />
                 </Form.Item>
                 <Form.Item
                   name="contactPerson"
                   label={<span className="dark:text-white">Contact Person Name</span>}
                   rules={[{ required: true, message: 'Field required.' }]}
                 >
-                  <Input placeholder="Enter" className="dark:bg-gray-700 dark:text-white" />
+                  <Input placeholder="Enter" className="placeholder-gray-400 dark:bg-gray-900 dark:text-white" />
                 </Form.Item>
                 <Form.Item
                   name="phoneNumber"
                   label={<span className="dark:text-white">Phone Number</span>}
                   rules={[{ required: true, message: 'Field required.' }]}
                 >
-                  <Input placeholder="Enter" type="tel" className="dark:bg-gray-700 dark:text-white" />
+                  <Input placeholder="Enter" type="tel" className="placeholder-gray-400 dark:bg-gray-900 dark:text-white" />
                 </Form.Item>
                 <Form.Item
                   name="email"
@@ -63,7 +63,7 @@ const HomePage: React.FC = () => {
                     { type: 'email', message: 'Please enter a valid email address!' }
                   ]}
                 >
-                  <Input placeholder="Enter" type="email" className="dark:bg-gray-700 dark:text-white" />
+                  <Input placeholder="Enter" type="email" className="placeholder-gray-400 dark:bg-gray-900 dark:text-white" />
                 </Form.Item>
                 <Form.Item className="md:col-span-1">
                   <Button type="primary" htmlType="submit" className="w-full">Let's Talk</Button>
