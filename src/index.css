@@ -29,3 +29,23 @@ body {
 .dark .ant-modal-close-x {
   color: #FFFFFF !important;
 }
+
+
+
+/* for input field */
+.ant-form-item-has-error .ant-input,
+.ant-form-item-has-error .ant-input-affix-wrapper {
+  background-color: #1a202c !important; /* Tailwind's bg-gray-900 */
+  color: #ffffff !important; /* Tailwind's text-white */
+}
+
+.ant-form-item-has-error .ant-input:focus,
+.ant-form-item-has-error .ant-input-affix-wrapper:focus {
+  background-color: #1a202c !important; /* Tailwind's bg-gray-900 */
+  color: #ffffff !important; /* Tailwind's text-white */
+}
+
+.ant-form-item-has-error .ant-input:placeholder,
+.ant-form-item-has-error .ant-input-affix-wrapper:placeholder {
+  color: #a0aec0 !important; /* Tailwind's text-gray-400 */
+}
